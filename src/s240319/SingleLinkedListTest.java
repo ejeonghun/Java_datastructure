@@ -25,6 +25,18 @@ class LinkedList { // 단순 연결리스트 클래스 정의
         this.head = null;
     }
 
+    // 단순 연결리스트 처음에 데이터 삽입
+    void insertFirstNode(String str) {
+        Node node = new Node(str); // 새 노드 생성
+        if (head == null) { // 리스트가 비어있으면 헤드에 새 노드를 연결
+            head = node;
+        } else { // 리스트가 비어있지 않으면 새 노드를 헤드 앞에 연결하고 헤드를 새 노드로 설정
+            Node current = head;
+            node.next = current;
+            head = node;
+        }
+    }
+
     // 단순 연결리스트에 마지막에 데이터 삽입
     void insertLastNode(String str) {
         Node node = new Node(str); // 새 노드 생성
@@ -46,17 +58,8 @@ class LinkedList { // 단순 연결리스트 클래스 정의
         pre.next = node; // pre 노드의 링크를 새 노드로 설정
     }
 
-    // 단순 연결리스트 처음에 데이터 삽입
-    void insertFirstNode(String str) {
-        Node node = new Node(str); // 새 노드 생성
-        if (head == null) { // 리스트가 비어있으면 헤드에 새 노드를 연결
-            head = node;
-        } else { // 리스트가 비어있지 않으면 새 노드를 헤드 앞에 연결하고 헤드를 새 노드로 설정
-            Node current = head;
-            node.next = current;
-            head = node;
-        }
-    }
+
+
 
     // 단순 연결리스트 마지막 데이터 삭제
     void deleteLastNode() {
