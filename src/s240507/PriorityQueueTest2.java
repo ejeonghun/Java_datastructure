@@ -8,7 +8,7 @@ public class PriorityQueueTest2 {
         // reverseOrder로 내림차순으로 정렬되도록 설정
         int[] arr = {3, 1, 9, 5, 7};
 
-        // 3~10까지의 정수를 입력
+        // arr의 정수를 입력
         for (int i = 0; i<arr.length; i++ )
             pq.add (arr[i]) ;
 
